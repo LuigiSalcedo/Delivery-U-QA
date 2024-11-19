@@ -1,0 +1,21 @@
+meta {
+  name: Registrar Usuario
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://delivery-u-api-test.onrender.com/api/users/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "César Luigi",
+    "lastName": "Salcedo",
+    "phoneNumber": "3551414106",
+    "email": "cesarsacledo@deliveryu.com",
+    "password": "abcdefg123*"
+  }
+}
