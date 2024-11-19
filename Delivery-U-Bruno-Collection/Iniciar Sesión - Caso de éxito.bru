@@ -1,0 +1,18 @@
+meta {
+  name: Iniciar Sesión - Caso de éxito
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://delivery-u-api-test.onrender.com/api/users/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "luigi@deliveryu.com",
+    "password": "abcdefg123*"
+  }
+}
