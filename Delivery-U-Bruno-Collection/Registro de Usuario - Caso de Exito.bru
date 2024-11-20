@@ -1,0 +1,21 @@
+meta {
+  name: Registro de Usuario - Caso de Exito
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://delivery-u-api-test.onrender.com/api/users/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Gabriel David",
+    "lastName": "Lara Montiel",
+    "phoneNumber": "3428270398",
+    "email": "loquesea@gmail.com",
+    "password": "123456789"
+  }
+}
