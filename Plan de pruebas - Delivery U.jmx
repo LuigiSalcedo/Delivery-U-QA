@@ -138,7 +138,7 @@
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables definidas por el Usuario">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
         </HTTPSamplerProxy>
@@ -221,7 +221,7 @@
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="-------------------" enabled="true"/>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Confirmación de pedido - CE/api/orders/confirm/d15afed2-dd24-45b5-847a-9003e87bb2bc-2">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Confirmación de pedido - CE/api/orders/confirm/d15afed2-dd24-45b5-847a-9003e87bb2bc-2" enabled="true">
           <stringProp name="HTTPSampler.domain">delivery-u-api-test.onrender.com</stringProp>
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -230,7 +230,7 @@
           <stringProp name="HTTPSampler.method">PUT</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables definidas por el Usuario">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
         </HTTPSamplerProxy>
@@ -244,6 +244,48 @@
               <elementProp name="Content-Type" elementType="Header">
                 <stringProp name="Header.name">Content-Type</stringProp>
                 <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, compress, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">bruno-runtime/1.34.2</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="-------------------" enabled="true"/>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Consultar informacion de pago del pedido - CE/api/orders/information/paymethod/34af8c68-87d5-4dba-9b8f-1bb13d6626ec-1" enabled="true">
+          <stringProp name="HTTPSampler.domain">delivery-u-api-test.onrender.com</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/orders/information/paymethod/34af8c68-87d5-4dba-9b8f-1bb13d6626ec</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables definidas por el Usuario">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFmNzE2MWM5LTdjYWUtNDQ5My1hNzQ0LWE1YmQyZDhiNWFjOSIsImV4cCI6MTczMjIyNDA3OCwiaXNzIjoiRGVsaXZlcnlVIiwiYXVkIjoiRGVsaXZlcnlVX1VzZXJzIn0.Da0myCyTf3qNHMCHHbc1cJnjqdcguGYYvWmSSQ50CTQ</stringProp>
+              </elementProp>
+              <elementProp name="request-start-time" elementType="Header">
+                <stringProp name="Header.name">request-start-time</stringProp>
+                <stringProp name="Header.value">1732137924446</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -277,7 +319,7 @@
         <boolProp name="ProxyControlGui.sampler_download_images">false</boolProp>
         <intProp name="ProxyControlGui.proxy_http_sampler_naming_mode">0</intProp>
         <stringProp name="ProxyControlGui.default_encoding"></stringProp>
-        <stringProp name="ProxyControlGui.proxy_prefix_http_sampler_name">Confirmación de pedido - CE</stringProp>
+        <stringProp name="ProxyControlGui.proxy_prefix_http_sampler_name">Consultar informacion de pago del pedido - CE</stringProp>
         <stringProp name="ProxyControlGui.proxy_pause_http_sampler"></stringProp>
         <boolProp name="ProxyControlGui.notify_child_sl_filtered">false</boolProp>
         <boolProp name="ProxyControlGui.regex_match">false</boolProp>
