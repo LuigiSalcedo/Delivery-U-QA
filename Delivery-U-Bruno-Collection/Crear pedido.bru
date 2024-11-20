@@ -1,0 +1,31 @@
+meta {
+  name: Crear pedido
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://delivery-u-api-test.onrender.com/api/orders/order
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFmNzE2MWM5LTdjYWUtNDQ5My1hNzQ0LWE1YmQyZDhiNWFjOSIsImV4cCI6MTczMjIxNzUzMCwiaXNzIjoiRGVsaXZlcnlVIiwiYXVkIjoiRGVsaXZlcnlVX1VzZXJzIn0.Njwln1pApO20Taz69B2vULtRRsGdbZWg7fXFApiF144
+}
+
+body:json {
+  {
+    "shippingAddress": "string",
+    "shippingPrice": 500000,
+    "payMethod": 0,
+    "dateTime": "2024-11-20T19:19:50.542Z",
+    "observations": "string",
+    "products": [
+      {
+        "productId": "1",
+        "quantity": 1
+      }
+    ]
+  }
+}
