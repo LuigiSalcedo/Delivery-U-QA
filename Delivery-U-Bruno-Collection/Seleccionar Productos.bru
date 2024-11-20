@@ -1,0 +1,19 @@
+meta {
+  name: Seleccionar Productos
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://delivery-u-api-test.onrender.com/api/store/products/all?store=1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  store: 1
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc3OWU0YmIyLThiOWQtNGYxOC1hMDMwLTVmMjVjZmJlM2NhYyIsImV4cCI6MTczMjE2NjUzMiwiaXNzIjoiRGVsaXZlcnlVIiwiYXVkIjoiRGVsaXZlcnlVX1VzZXJzIn0.hV9SZyTNWvEjoSvQBAznOiWJz_nkalRKlFE55qJgMOM
+}
