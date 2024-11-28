@@ -1,0 +1,19 @@
+meta {
+  name: Consultar productos de una tienda
+  type: http
+  seq: 12
+}
+
+get {
+  url: https://delivery-u-api-test.onrender.com/api/store/products/all?store=1
+  body: none
+  auth: none
+}
+
+params:query {
+  store: 1
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI3Njk2MDUzLTcwMzktNGE2MS05NTFiLWQ2MWYxNzZlMDgxMyIsImV4cCI6MTczMjgyNjQzMiwiaXNzIjoiRGVsaXZlcnlVIiwiYXVkIjoiRGVsaXZlcnlVX1VzZXJzIn0.k6f_91JFvTAonCWiC7i8NLzKe1hvmSH4qwtPcJ2Bxps
+}
