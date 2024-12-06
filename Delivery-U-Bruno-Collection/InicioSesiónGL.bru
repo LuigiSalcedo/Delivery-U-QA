@@ -1,0 +1,18 @@
+meta {
+  name: InicioSesiónGL
+  type: http
+  seq: 14
+}
+
+post {
+  url: https://delivery-u-api-test.onrender.com/api/users/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "gabriellm@deliveryu.com",
+    "password": "12345678"
+  }
+}
